@@ -26,6 +26,13 @@ public class LoginController {
 		modelAndView.setViewName("login");
 		return modelAndView;
 	}
+
+	@RequestMapping(value={"/login/frog"}, method = RequestMethod.GET)
+	public ModelAndView frog(){
+		ModelAndView modelAndView = new ModelAndView();
+		modelAndView.setViewName("frog");
+		return modelAndView;
+	}
 	
 	
 	@RequestMapping(value="/registration", method = RequestMethod.GET)
@@ -78,7 +85,14 @@ public class LoginController {
 		modelAndView.addObject("adminMessage","This is another page");
 		modelAndView.setViewName("admin/ferrari");
 		return modelAndView;
+
 	}
-	
+
+
+
+
+
+
+
 
 }
